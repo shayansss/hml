@@ -2,7 +2,7 @@
 Typically, for a range of numerical simulations, the numerical results are generated and gathered in a dataset by expensive numerical solvers to train a machine learning model. Then, the machine learning model is used, instead of the numerical solver, which is significantly faster. Our developed hybrid algorithm used a similar method, however it also uses a reduced-order (but still fast enough) numerical solver to get some rough estimation of the results. Subsequently, the machine learning model focuses on merely improving the accuracy of the results. This renders our hybrid method similar to the regular machine learning methods, except for the fast reduced-order model that should be inserted before the machine learning part.
 
 # Dependency
-We have the following software dependency:
+For the machine learning implementation:
 
 - Python >= 3.8.8
 - Jupyter Notebook >= 6.3.0
@@ -10,7 +10,10 @@ We have the following software dependency:
 - numpy >= 1.20.1
 - scikit-learn >= 0.24.1
 - tensorflow >= 2.5.0
-- keras-tuner} >= 1.0.1
+- keras-tuner >= 1.0.1
+
+For generation of datasets and contour plots:
+- Abaqus/CAE >= 2020
 
 # Experiment workflow
 
