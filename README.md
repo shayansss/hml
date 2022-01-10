@@ -15,7 +15,7 @@ We have the following software dependency:
 # Experiment workflow
 
 ## Installation
-Download the archive file using `git clone https://github.com/hiddenuser9439950/hml`, and then, use the Jupyter Notebook to run the script (in `Hybrid_ml.ipynb`).
+Download the archive file using `git clone https://github.com/shayansss/hml`, and then, use the Jupyter Notebook to run the script (in `Hybrid_ml.ipynb`).
 
 ## Dataset preprepration
 The datasets need to be loaded before training, and they should be scaled using the `scaler` function. Besides this, the odd and even rows of the input files refer to two different simulations. For the output datasets, the labels of each sample, which are in a matrix form, are located below each other, associating to each of the input row. They can be reshaped to create separate datasets using the `preprocessing` function. Note that as the outputs of the reduced-order numerical models is fed into the machine learning model as input values, the relevant dataset is named `input_mono.csv`.
