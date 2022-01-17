@@ -357,3 +357,22 @@ C
       RETURN
       END
 C
+C     CHANGING INDICES OF TENSORS
+C
+      INTEGER FUNCTION IDX(i,j)
+      INTEGER INDX(2,6)
+      INDX(1,1)=1
+      INDX(2,1)=1
+      INDX(1,2)=2
+      INDX(2,2)=2
+      INDX(1,3)=3
+      INDX(2,3)=3
+      INDX(1,4)=1
+      INDX(2,4)=2
+      INDX(1,5)=1
+      INDX(2,5)=3
+      INDX(1,6)=2
+      INDX(2,6)=3
+      IDX=INDX(i,j)
+      RETURN
+      END
