@@ -1,11 +1,3 @@
-C
-C
-C
-C     THIS CODE IS DEVELOPED BY SEYED SHAYAN SAJJADINIA, A SIMPLIED 
-C     VERSION OF HIS PREVIOUS WORK AT https://github.com/shayansss/msc.
-C
-C
-C
 C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 C     SDVINI
 C - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
