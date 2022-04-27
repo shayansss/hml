@@ -22,7 +22,7 @@ For generation of datasets and contour plots:
 ## Installation
 You should install all the dependencies (tested successfully on Windows 10). For a simple installation of the Python libraries and relevant tools, use [(Ana)conda](https://www.anaconda.com/). For the numerical implementation, install the other software packages before the Abaqus installation, which can be tricky, as they should be linked properly (for the Fortran subroutine implementation). This is described (using some other similar versions) in [this tutorial](http://dx.doi.org/10.13140/RG.2.2.33539.32800). You can download the archive by
 
-    `git clone https://github.com/shayansss/hml`
+    git clone https://github.com/shayansss/hml
 
 As the address of the root directory of the local repository in your system may not be the same as the one set in the code, you should change it to your local address by correcting the values passed to: 1) the `parentFolder` local variable of the `abaqus` function inside the `hybrid_ml.ipynb` file; 2) the `os.chdir` function inside `3d.py`, `2d.py`, and `visualization.py`; 3) the `FilLoc` variable in `NONLIPLS.for`. Likewise, you can open the `NEW.cae` file and update the directory address of the Fortran subroutine file, accessible by finding the defined `Jobs` settings, where you can modify the address of the subroutine, and finally save this file.
 
