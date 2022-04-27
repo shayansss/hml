@@ -1,27 +1,8 @@
 from abaqus import *
 from abaqusConstants import *
-import section
-import regionToolset
-import displayGroupMdbToolset as dgm
-import part
-import material
-import assembly
-import step
-import interaction
-import load
-import mesh
-import optimization
-import job
-import sketch
-import visualization
-import xyPlot
 import displayGroupOdbToolset as dgo
-import connectorBehavior
-import time
 import os
-from shutil import copyfile
 import numpy as np
-from time import time
 
 class main_tools(object):
     def __init__(self, jobName, partName, instanceName, modelName, mdb, session, viewportObj1 = 'Viewport: 1'):
@@ -112,7 +93,6 @@ class main_tools(object):
 os.chdir(r"C:\temp\HybridML")
 FileName = 'Open_knee_native'
 openMdb(pathName = FileName + '.cae')
-# mdb.saveAs(pathName = FileName + '-Backup.cae')
 
 jobName, partName, instanceName, modelName = 'Job-1', 'femur_cartilage', 'femur_cartilage-1', 'OpenKnee_model'
 modelObj = mdb.models[modelName]
@@ -163,5 +143,4 @@ viewportObj.odbDisplay.setPrimaryVariable(variableLabel=name, outputPosition=NOD
 session.pngOptions.setValues(imageSize=(4000, 2536))
 session.printOptions.setValues(reduceColors=False)
 session.printToFile(fileName='%s'%(path), format=PNG, canvasObjects=(viewportObj, ))
-
 
