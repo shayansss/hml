@@ -356,10 +356,7 @@ for u1, u2, alpha1, timeSpan in zip(u1List, u2List, alpha1List, timeSpanList):
             
             nodalCoord = mt.extract_coords_values(frameNum = 0, stepName = 'EQ')
             np.random.seed(sample_num)
-            if modelName == 'Model-1':
-                randList = np.random.rand(len(nodalCoord))/300
-            else:
-                randList = np.random.rand(len(nodalCoord))/200
+            randList = np.random.rand(len(nodalCoord))/300
             
             temp = nodalCoord[:]
             for t in xrange(len(nodalCoord)):
