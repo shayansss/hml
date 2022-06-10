@@ -74,9 +74,9 @@ If you correctly run the same code, you may observe a slight change in the resul
 
 The code is particularly developed for the implementation of our experiments and is open-sourced for further clarification. Thus, application of them in other studies may require further modifications. 
 
-**Can I use this repository to learn surrogate modeling by Abaqus and TensorFlow?**
+**Can this repository be used to learn surrogate modeling by Abaqus and TensorFlow?**
 
-No. Please, do not use this repository to learn the basics of surrogate modeling, as you should already be familiar with it. For this, check out our other simpler open-sourced [project](https://github.com/shayansss/pmse).
+No. Please, do not use this repository to learn the basics of surrogate modeling, as you should already be familiar with it to understand the code here. For a simple tutorial of surrogate modeling, check out our other simpler open-sourced [project](https://github.com/shayansss/pmse).
 
 ## Other contributions
 I would like to thank everyone who contributed to this project, including the co-authors of the papers, anonymous reviewers, and others who provide useful feedback. Special thanks go to [Prof. Duraisamy Shriram](https://scholar.google.com/citations?user=HtBrxbsAAAAJ&hl=en) for his help in the implementation of the numerical 3D model.
