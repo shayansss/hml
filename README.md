@@ -1,7 +1,22 @@
-# Hybrid machine learning for finite element surrogate modeling of soft tissues
-This repository contains the research code of our recently [accepted paper](https://shayansss.github.io/files/2022_06_preprint.pdf) entitled "**Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues**".
+# HML: Hybrid Machine Learning
+This repository contains the research code of our "HML" method, recently *accepted* for publication, entitled "[Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues](https://shayansss.github.io/files/2022_06_preprint.pdf)".
 
-Surrogates are typically used to speed up numerical simulations, based on the generated numerical results gathered inside some datasets by an expensive numerical solver to then train a machine learning model that can be used instead of the slow numerical model. Our developed hybrid algorithm utilized a similar method; however, it firstly has a reduced-order (but fast enough) numerical submodel that can give a rough estimate of the results, and secondly a machine learning submodel within this hybrid implementation improves the accuracy of the low-fidelity results to the level of the high-fidelity results. The main benefits of it, which is potentially applicable in many of the soft tissues' finite element simulations, are its non-destructive and efficient implementation (since it does not complicate learning and can work with limited data of multi-physics problems). Here, we performed some empirical tests, as elaborated in the paper.
+Surrogates are typically used to speed up numerical simulations, based on the generated numerical results gathered inside some datasets by an expensive numerical solver to then train a machine learning model that can be used instead of the slow numerical model. Our HML algorithm utilized a similar method; However, it firstly has a reduced-order (but fast enough) numerical submodel that can give a rough estimate of the results, and secondly a machine learning submodel within this hybrid implementation improves the accuracy of the low-fidelity results to the level of the high-fidelity results. The main benefits of it, which is potentially applicable in many of the soft tissues' finite element simulations, are its non-destructive and efficient implementation (since it does not complicate learning and can work with limited data of multi-physics problems). Here, we performed some empirical tests, as elaborated in the paper.
+
+## Citation
+If this research data is useful for your work, kindly please consider citing our work ([DOI](https://doi.org/10.1016/j.compbiomed.2022.105699) | [PDF](https://shayansss.github.io/files/2022_06_preprint.pdf)):
+
+```
+@article{sajjadinia2022a,
+    title = {Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues},
+    author = {Seyed Shayan Sajjadinia and Bruno Carpentieri and Duraisamy Shriram and Gerhard A. Holzapfel},
+    journal = {Computers in Biology and Medicine},
+    pages = {105699},
+    year = {2022},
+    issn = {0010-4825},
+    doi = {10.1016/j.compbiomed.2022.105699},
+}
+```
 
 ## Dependency
 For machine learning implementation:
@@ -44,3 +59,24 @@ We ran tests for different simulations, hyperparameters, etc., and the results a
 
 ## Experiment customization
 In the `hybrid_ml.ipynb` file, the hyperparameters can be changed. For this, you can modify the arguments of the `run_2d_experiments_on_samples` and `train_model` functions to define different architectures of the graph-based and deep learning models, respectively. On the other hand, the numerical models and physics problems can be changed using the options available in Abaqus. You can increase the fidelity of the constitutive equations by the `NONLIPLS.for` and `*.cae` files, although it may increase the computational costs extremely, covered in our previous studies of the [bone-cartilage modeling](https://shayansss.github.io/files/2019_09_preprint.pdf) and [pre-stress modeling](https://shayansss.github.io/files/2021_02.pdf). This procedure is straightforward, but regardless of any surrogate you implement using Abaqus, some knowledge of the Abaqus scripting is needed.
+
+## FAQ
+
+**Does this method outperform the physics-informed machine learning algorithms?**
+
+We have not carried out any comparative studies between these two groups of algorithms, as it is outside the scope of this research. But in general, physics-informed surrogates have typically more complex training implementation, while they might be faster (although not always) in inference. On the other hand, multi-fidelity surrogates, like what we developed, have usually straightforward training, but their efficiency is extremely dependent on the definition of a relevant and efficient low-fidelity numerical model (which might not be always available). Thus, both techniques have their own pros and cons. Indeed, we expect, in the future, to see studies with a combination of these techniques for very complex physics problems.
+
+**Why do I receive different results?**
+
+If you correctly run the same code, you may observe a slight change in the results, as the learning algorithm has randomness in initialization, optimization, etc. This issue of reproducibility is ignored in our implementation, as its impact on the results is mostly minor and unimportant. On the other hand, if you change the modeling or training conditions, you should of course get different results, since our surrogate modelings have special assumptions, i.e., they are performed with limited computational resources; thus, few training samples are provided with very efficient and typical training conditions (as we expect it when a surrogate is typically used for simulation acceleration).
+
+**Is this research code ready to be used in my biomechanical research?**
+
+The code is particularly developed for the implementation of our experiments and is open-sourced for further clarification. Thus, application of them in other studies may require further modifications. 
+
+**Can I use this repository to learn surrogate modeling by Abaqus and TensorFlow?**
+
+No. Please, do not use this repository to learn the basics of surrogate modeling, as you should already be familiar with it. For this, check out our other simpler open-sourced [project](https://github.com/shayansss/pmse).
+
+## Other contributions
+I would like to thank everyone who contributed to this project, including the co-authors of the papers, anonymous reviewers, and others who provide useful feedback. Special thanks go to [Prof. Duraisamy Shriram](https://scholar.google.com/citations?user=HtBrxbsAAAAJ&hl=en) for his help in the implementation of the numerical 3D model.
