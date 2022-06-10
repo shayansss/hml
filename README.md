@@ -72,7 +72,7 @@ If you correctly run the same code, you may observe a slight change in the resul
 
 **Is this research code ready to be used in my biomechanical research?**
 
-The code is particularly developed for the implementation of our experiments and is open-sourced for further clarification. Thus, application of them in other studies may require further modifications. 
+The code is particularly developed for the implementation of our experiments and is open-sourced for more clarification of the paper. Therefore, application of them in other studies may require further modifications. 
 
 **Can this repository be used to learn surrogate modeling by Abaqus and TensorFlow?**
 
