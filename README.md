@@ -68,7 +68,7 @@ We have not carried out any comparative studies between these two groups of algo
 
 **Why do I receive different results?**
 
-If you correctly run the same code, you may observe a slight change in the results, as the learning algorithm has randomness in initialization, optimization, etc. This issue of reproducibility is ignored in our implementation, as its impact on the results is mostly minor and unimportant. On the other hand, if you change the modeling or training conditions, you should of course get different results, since our surrogate modelings have special assumptions, i.e., they are performed with limited computational resources; thus, few training samples are provided with very efficient and typical training conditions (as we expect it when a surrogate is typically used for simulation acceleration).
+If you correctly run the same code, you may observe a slight change in the results, as the learning algorithm has randomness in initialization, optimization, etc. This issue of reproducibility is ignored in our implementation, as its impact on the results is mostly minor and unimportant. On the other hand, if you change the modeling or training conditions, you should of course get different results, since our surrogate modelings have special assumptions, i.e., they are performed with limited computational resources; thus, few training samples are provided with very efficient and typical training conditions (as we typically expect when a surrogate is used for simulation acceleration).
 
 **Is this research code ready to be used in my biomechanical research?**
 
