@@ -1,20 +1,21 @@
-# HML: Hybrid Machine Learning
-This repository contains the research code of our "HML" method, recently *accepted* for publication, entitled "[Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues](https://shayansss.github.io/files/2022_06.pdf)".
+# Hybrid machine learning for multi-fidelity surrogates of soft tissue biomechanics
+This repository contains the research code of our publication, entitled "[Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues](https://shayansss.github.io/files/2022_06.pdf)".
 
-Surrogates are typically used to speed up numerical simulations, based on the generated numerical results gathered inside some datasets by an expensive numerical solver to then train a machine learning model that can be used instead of the slow numerical model. Our HML algorithm utilized a similar method; However, it firstly has a reduced-order (but fast enough) numerical submodel that can give a rough estimate of the results, and secondly a machine learning submodel within this hybrid implementation improves the accuracy of the low-fidelity results to the level of the high-fidelity results. The main benefits of it, which is potentially applicable in many of the soft tissues' finite element simulations, are its non-destructive and efficient implementation (since it does not complicate learning and can work with limited data of multi-physics problems). Here, we performed some empirical tests, as elaborated in the paper.
+Surrogates are typically used to speed up numerical simulations, based on the generated numerical results gathered inside some datasets by an expensive numerical solver to then train a machine learning model that can be used instead of the slow numerical model. Our hybrid machine learning (HML) algorithm utilized a similar method; However, it firstly has a reduced-order (but fast enough) numerical submodel that can give a rough estimate of the results, and secondly a machine learning submodel within this hybrid implementation improves the accuracy of the low-fidelity results to the level of the high-fidelity results. The main benefits of it, which is potentially applicable in many of the soft tissues' finite element simulations, are its non-destructive and efficient implementation (since it does not complicate learning and can work with limited data of multi-physics problems). Here, we performed some empirical tests, as elaborated in the paper.
 
 ## Citation
 If this research data is useful for your work, kindly please consider citing our work ([DOI](https://doi.org/10.1016/j.compbiomed.2022.105699) | [PDF](https://shayansss.github.io/files/2022_06.pdf)):
 
 ```
-@article{sajjadinia2022a,
-    title = {Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues},
-    author = {Seyed Shayan Sajjadinia and Bruno Carpentieri and Duraisamy Shriram and Gerhard A. Holzapfel},
-    journal = {Computers in Biology and Medicine},
-    pages = {105699},
-    year = {2022},
-    issn = {0010-4825},
-    doi = {10.1016/j.compbiomed.2022.105699},
+@article{sajjadinia2022,
+title = {Multi-fidelity surrogate modeling through hybrid machine learning for biomechanical and finite element analysis of soft tissues},
+journal = {Computers in Biology and Medicine},
+volume = {148},
+pages = {105699},
+year = {2022},
+issn = {0010-4825},
+doi = {10.1016/j.compbiomed.2022.105699},
+author = {Seyed Shayan Sajjadinia and Bruno Carpentieri and Duraisamy Shriram and Gerhard A. Holzapfel},
 }
 ```
 
