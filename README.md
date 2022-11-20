@@ -80,4 +80,4 @@ The code is particularly developed for the implementation of our experiments and
 No. Please, do not use this repository to learn the basics of surrogate modeling, as you should already be familiar with it to understand the code here. For a simple tutorial of surrogate modeling, check out our other simpler open-sourced [project](https://github.com/shayansss/pmse).
 
 ## Other contributions
-I would like to thank everyone who contributed to this project, including the co-authors of the papers, anonymous reviewers, and others who provide useful feedback. Special thanks go to [Prof. Duraisamy Shriram](https://scholar.google.com/citations?user=HtBrxbsAAAAJ&hl=en) for his help in the implementation of the numerical 3D model.
+I would like to thank everyone who contributed to this project, including the co-authors of the paper, anonymous reviewers, and others who provide useful feedback. Special thanks go to [Prof. Duraisamy Shriram](https://scholar.google.com/citations?user=HtBrxbsAAAAJ&hl=en) for his help in the implementation of the numerical 3D model.
